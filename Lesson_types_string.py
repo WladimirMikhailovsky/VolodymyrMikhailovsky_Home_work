@@ -15,3 +15,7 @@ s = 'github'
 print(s[:3])
 print(s[3:])
 print(s[-3:])
+     #0123
+s1 = 'abcd'
+print(s1[::-1])
+

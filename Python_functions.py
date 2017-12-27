@@ -14,6 +14,8 @@ print(result2)
 
 
 
+
+
 def print_delimeter(symbol = "+", num_repeat = 40):
     print(symbol*num_repeat)
 
@@ -64,6 +66,8 @@ def celc2faren (degrees):
     return degrees * 1.8 + 32
 print(celc2faren(36.7))
 print(faren2celc (97.88))
+
+
 
 
 
