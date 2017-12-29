@@ -36,7 +36,7 @@ print("--------------------------------------------")
 
 #5.	Найти результат выражения для произвольных значений a,b,c: | a - b | /( a + b)3 - cos( c )
 
-h = abs (a - b) / (a + b)**3 - math.cos(c)
+h = abs(a - b) / (a + b)**3 - math.cos(c)
 print("Задание 5")
 print("При a = %d, b = %d, c = %d h равно: %0.3f" % (a, b, c, h))
 print("--------------------------------------------")
@@ -58,18 +58,30 @@ print("05.17.2016")
 print("european_date_style is: ")
 european_date_style = american_date_style [3:6] + american_date_style [0:3] + american_date_style [6:100]
 print(european_date_style)
+
+# Еще один вариант кода:
+
+current_date = "05.17.2016"
+v = current_date.split('.')
+months = int(v[0])
+days = int(v[1])
+years = int(v[2])
+print("%d.%d.%d" % (days, months, years))
 print("--------------------------------------------")
 
 #8.	Дана строка с именем студента, в которой имя предшествует фамилии, например
 # ‘Mark Zuckerberg‘. Написать программу, которая преобразует эту строку, ставя
 # фамилию на первое место, а имя на второе. Т.е. ‘Mark Zuckerberg‘ -> ‘Zuckerberg Mark‘.
 
-               #0123456789
 name_surname = "Mark Zuckerberg"
-surname_name = name_surname.split(' ')
+v = name_surname.split(" ")
+name = (v[0])
+surname = (v[1])
 print("Задание 8")
-print(surname_name)
+print("%s %s" % (surname, name))
 print("--------------------------------------------")
+
+
 
 
 
