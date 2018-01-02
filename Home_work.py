@@ -62,10 +62,10 @@ print(european_date_style)
 # Еще один вариант кода:
 
 current_date = "05.17.2016"
-v = current_date.split('.')
-months = int(v[0])
-days = int(v[1])
-years = int(v[2])
+split = current_date.split('.')
+months = int(split[0])
+days = int(split[1])
+years = int(split[2])
 print("%d.%d.%d" % (days, months, years))
 print("--------------------------------------------")
 
@@ -74,9 +74,9 @@ print("--------------------------------------------")
 # фамилию на первое место, а имя на второе. Т.е. ‘Mark Zuckerberg‘ -> ‘Zuckerberg Mark‘.
 
 name_surname = "Mark Zuckerberg"
-v = name_surname.split(" ")
-name = (v[0])
-surname = (v[1])
+split = name_surname.split(" ")
+name = split[0]
+surname = split[1]
 print("Задание 8")
 print("%s %s" % (surname, name))
 print("--------------------------------------------")
@@ -87,8 +87,8 @@ print("--------------------------------------------")
 
 print("Задание 9")
 snake_style_name = "employee_first_name"
-v2 = snake_style_name.split("_")
-CamelizedStyleName = v2[0].capitalize() + v2[1].capitalize() + v2[2].capitalize()
+split1 = snake_style_name.split("_")
+CamelizedStyleName = split1[0].capitalize() + split1[1].capitalize() + split1[2].capitalize()
 print("Snake_style: %s" % snake_style_name)
 print("CamelizedStyle: %s" % CamelizedStyleName)
 print("--------------------------------------------")
@@ -103,20 +103,21 @@ print("--------------------------------------------")
 print("Задание 10")
 writer = "Alexander Pushkin*06-06-1799*10-02-1837"
 
-w = writer.split("*")
-data = w[1].split("-") + w[2].split("-")
-years_old = int(data[5]) - int(data[2])
-name_years = w[0] + " - " + str(years_old)
+split2 = writer.split("*")
+dates = split2[1].split("-") + split2[2].split("-")
+years_old = int(dates[5]) - int(dates[2])
+name_years = split2[0] + " - " + str(years_old)
 
 print("Имя и возраст писателя: % s" %(name_years))
 
 painter = "Leonardo da Vinchi*1452-15-04*1519-02-05"
 p = painter.split("*")
-datas = p[1].split("-") + p[2].split("-")
-year_old = int(datas[3]) - int(datas[0])
+life_dates = p[1].split("-") + p[2].split("-")
+year_old = int(life_dates[3]) - int(life_dates[0])
 name_year = p[0] + " - " + str(year_old)
 print("Имя и возраст художника: %s" % (name_year))
 print("--------------------------------------------")
+
 
 
 
