@@ -81,7 +81,42 @@ print("Задание 8")
 print("%s %s" % (surname, name))
 print("--------------------------------------------")
 
+#9.	Написать программу, которая преобразует имя переменной в формате snake_style
+# в формат CamelizedStyle. Для простоты считаем, что имя переменной всегда состоит
+# из 3-х слов. Например: ‘employee_first_name’ -> ‘EmployeeFirstName’
 
+print("Задание 9")
+snake_style_name = "employee_first_name"
+v2 = snake_style_name.split("_")
+CamelizedStyleName = v2[0].capitalize() + v2[1].capitalize() + v2[2].capitalize()
+print("Snake_style: %s" % snake_style_name)
+print("CamelizedStyle: %s" % CamelizedStyleName)
+print("--------------------------------------------")
+
+#10.Дана строка вида 'Leo Tolstoy*1828-08-28*1910-11-20'. В этой строке указаны имя
+# писателя и через символ * даты рождения и смерти. Даты указаны в формате "YYYY-MM-DD".
+#  Требуется написать программу, которая по переданной строке определит возраст писателя
+#  и распечает его имя и возраст. Например, для строки 'Leo Tolstoy*1828-08-28*1910-11-20'
+#  программа должна распечает: 'Leo Tolstoy, 82'. Для строки 'Marcus Aurelius*121-04-
+# 26*180-03-17' - 'Marcus Aurelius, 59'.
+
+print("Задание 10")
+writer = "Alexander Pushkin*06-06-1799*10-02-1837"
+
+w = writer.split("*")
+data = w[1].split("-") + w[2].split("-")
+years_old = int(data[5]) - int(data[2])
+name_years = w[0] + " - " + str(years_old)
+
+print("Имя и возраст писателя: % s" %(name_years))
+
+painter = "Leonardo da Vinchi*1452-15-04*1519-02-05"
+p = painter.split("*")
+datas = p[1].split("-") + p[2].split("-")
+year_old = int(datas[3]) - int(datas[0])
+name_year = p[0] + " - " + str(year_old)
+print("Имя и возраст художника: %s" % (name_year))
+print("--------------------------------------------")
 
 
 
