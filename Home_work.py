@@ -111,12 +111,13 @@ name_years = split2[0] + " - " + str(years_old)
 print("Имя и возраст писателя: % s" %(name_years))
 
 painter = "Leonardo da Vinchi*1452-15-04*1519-02-05"
-p = painter.split("*")
-life_dates = p[1].split("-") + p[2].split("-")
+info_split = painter.split("*")
+life_dates = info_split[1].split("-") + info_split[2].split("-")
 year_old = int(life_dates[3]) - int(life_dates[0])
-name_year = p[0] + " - " + str(year_old)
+name_year = info_split[0] + " - " + str(year_old)
 print("Имя и возраст художника: %s" % (name_year))
 print("--------------------------------------------")
+
 
 
 
