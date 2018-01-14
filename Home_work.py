@@ -125,21 +125,36 @@ print("--------------------------------------------")
 print("Задание 11")
 def degrees2radians(degrees):
     return float((degrees * math.pi) / 180)
-print(degrees2radians(60))
-print(degrees2radians(45))
-print(degrees2radians(40))
+print(degrees2radians(60), "radians")
+print(degrees2radians(45), "radians")
+print(degrees2radians(40), "radians")
 
-
+print("--------------------------------------------")
 #13.Пользователь вводит длины катетов прямоугольного треугольника.
 # Написать функцию, которая вычислит площадь треугольника и его периметр.
 # Результат работы функции вывести на печать.
 
+#12.Написать функцию, которая рассчитывает сумму всех цифр некоторого трехзначного
+# числа, введенного пользователем в консоли, без использования операторов цикла.
+# Реализовать задачу без использования строк.
+
+print("Задание 12")
+digits = "221"
+sum_of_digits = int(digits [0]) + int(digits [1]) + int(digits [2])
+print(sum_of_digits)
+print("--------------------------------------------")
+
 print("Задание 13")
-def triangle_square_and_perimeter(a, b):
+def triangle_square(a, b):
+    a = 5
+    b = 5
+
     return float((a * b) / 2) # Triangle square
-    return float(math.sqrt((a**2 + b**2))) # Hypotenuse
-    return float(a + b + c) # Triangle_perimeter
-print(triangle_square_and_perimeter(3, 2))
+print('Triangle square is: %.2f cm'% triangle_square(a, b))
+
+def triangle_perimetr(a, b):
+    return float(a + b + (math.sqrt(a**2 + b**2))) # Triangle_perimeter
+print('Triangle perimeter is: %.2f cm' % triangle_perimetr (a, b))
 print("--------------------------------------------")
 
 #14.Написать функцию, которая будет проверять четность некоторого числа.
