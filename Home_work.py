@@ -130,9 +130,6 @@ print(degrees2radians(45), "radians")
 print(degrees2radians(40), "radians")
 
 print("--------------------------------------------")
-#13.Пользователь вводит длины катетов прямоугольного треугольника.
-# Написать функцию, которая вычислит площадь треугольника и его периметр.
-# Результат работы функции вывести на печать.
 
 #12.Написать функцию, которая рассчитывает сумму всех цифр некоторого трехзначного
 # числа, введенного пользователем в консоли, без использования операторов цикла.
@@ -142,6 +139,16 @@ print("Задание 12")
 digits = "221"
 sum_of_digits = int(digits [0]) + int(digits [1]) + int(digits [2])
 print(sum_of_digits)
+
+def sum_of_digits(number):
+   first_digit = number%10
+   number /= 10
+   second_digit = int(number%10)
+   number /= 10
+   third_digit = int(number%10)
+   sum = first_digit + second_digit + third_digit
+   return sum
+print(sum_of_digits(222))
 print("--------------------------------------------")
 
 print("Задание 13")
@@ -162,7 +169,7 @@ print("--------------------------------------------")
 print("Задание 14")
 def is_even(number):
     return number % 2 == 0
-print(is_even(3))
+print(is_even(4))
 print("--------------------------------------------")
 
 
