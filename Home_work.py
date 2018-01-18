@@ -153,15 +153,12 @@ print("--------------------------------------------")
 
 print("Задание 13")
 def triangle_square(a, b):
-    a = 5
-    b = 5
-
     return float((a * b) / 2) # Triangle square
-print('Triangle square is: %.2f cm'% triangle_square(a, b))
+print('Triangle square is: %.2f cm'% triangle_square(5, 5))
 
 def triangle_perimetr(a, b):
     return float(a + b + (math.sqrt(a**2 + b**2))) # Triangle_perimeter
-print('Triangle perimeter is: %.2f cm' % triangle_perimetr (a, b))
+print('Triangle perimeter is: %.2f cm' % triangle_perimetr (6, 6))
 print("--------------------------------------------")
 
 #14.Написать функцию, которая будет проверять четность некоторого числа.
